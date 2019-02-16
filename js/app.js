@@ -1,4 +1,4 @@
-import jump from 'jump.module.js';
+import jump from '../node_modules/jump.js/dist/jump.module.js';
 
 let btnTop = document.getElementById("btn-top");
 let btnSuperstar = document.getElementById("btn-superstar");
