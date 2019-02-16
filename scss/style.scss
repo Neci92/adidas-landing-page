@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+$transparent-color: rgba(255, 255, 255, 0.8);
+$secondary-bg-color: #eee;
+$main-color: #34AAFF;
+$font-color-light: #FFF;
+$font-color-dark: #222;
+$font-big: 48px;
+$font-medium: 24px;
+$font-small: 16px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  max-width: 90%;
+  margin: auto;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#toggler {
+  display: none;
+}
+
+//----------- buttons -------------------
+.transparent-btn,
+.full-btn  {
+  padding: 10px;
+  display: inline-block;
+  width: 130px;
+  margin-top: 24px;
+  font-size: $font-small;
+}
+
+.full-btn {
+  background-color: $font-color-light;
+  color: $main-color;
+}
+
+.transparent-btn {
+  margin-left: 10px;
+  border: 1px solid $font-color-light;
+  color: $font-color-light;
+}
+
+// =============== HEADER ================
+header {
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  background-color: $transparent-color;
+  height: 60px;
+
+    img {
+      margin: 5px;
+      float: left;
+      height: 50px;
+    }
+
+    nav {
+      float: right;
+      li {
+        list-style: none;
+        display: inline;
+        margin-left: 20px;
+        a {
+          cursor: pointer;
+          display: inline-block;
+          line-height: 57px;
+          text-decoration: none;
+          color: $font-color-dark;
+          transition: .1s;
+          &:hover {
+            border-bottom: 3px solid $font-color-dark;
+          }
+        }
+      }
+    }
+}
+
+// ======== SHOWCASE ===========
+
+#showcase {
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+  clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0);
+  background-image: url('../img/showcase.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #first-message {
+    text-align: center;
+    background-color: $transparent-color;
+    padding: 70px;
+    h2 {
+      font-size: $font-big;
+      margin-bottom: 20px;
+      color: $font-color-dark;
+    }
+    h4 {
+      font-size: $font-medium;
+      color: $font-color-dark;
+    }
+
+  }
+}
+
+
+// ------- stripes -------------------
+
+#stripes {
+  position: absolute;
+  top: 100%;
+  height: 100vh;
+  z-index: -1;
+
+  .stripe {
+    position: absolute;
+    -webkit-clip-path: polygon(0 50%, 100% 0%, 100% 5%, 0% 55%);
+    clip-path: polygon(0 50%, 100% 0%, 100% 5%, 0% 55%);
+    background-color: $main-color;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .stripe1 {
+    top: -170px;
+  }
+
+  .stripe2 {
+    top: -85px;
+  }
+}
+
+// -------------------- subs -------------------
+
+#subs {
+  width: 80%;
+  background-color: $secondary-bg-color;
+  margin: 75px auto;
+  text-align: center;
+  padding: 20px;
+
+  h3 {
+    font-size: $font-medium;
+    color: $font-color-dark;
+  }
+  input {
+    border: none;
+    padding: 5px;
+    width: 80%;
+    margin: 30px auto;
+  }
+  button {
+    display: block;
+    width: 200px;
+    background-color: $main-color;
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+//----------- superstar example -------------------
+#superstar-example {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+
+  .image {
+    background: url('../img/superstar.webp') no-repeat center/cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .tile1 {
+      background: url('../img/tile1.jpg') no-repeat center/cover;
+    }
+    .tile2 {
+      background: url('../img/tile2.webp') no-repeat center/cover;
+    }
+    .tile3 {
+      background: url('../img/tile3.webp') no-repeat center/cover;
+    }
+    .tile4 {
+      background: url('../img/tile4.jpg') no-repeat center/cover;
+    }
+}
+  .desc {
+    padding: 20px;
+    text-align: center;
+    background-color: $main-color;
+
+    h4 {
+      margin: 24px auto;
+      color: $font-color-light;
+      font-size: $font-medium;
+    }
+
+    p {
+      margin: 24px auto;
+      color: $font-color-light;
+    }
+  }
+}
+
+// ----------- yt video -------------------
+
+#yt-vid {
+  margin: 80px auto;
+  width: 100%;
+  height: 500px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// --------------- other models ---------------
+#other-models {
+  background-color: $main-color;
+  margin-top: 20px;
+  text-align: center;
+  padding: 30px 0;
+  h3,
+  p {
+    color: $font-color-light;
+  }
+  .other-models-pics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 20px 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ------ footer -------------------
+footer {
+  background-color: $secondary-bg-color;
+  .site-map {
+    padding: 24px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    h4, p {
+      cursor: pointer;
+    }
+  }
+  .copyright {
+    background-color: #2773AA;
+    height: 20px;
+    .container {
+      position: relative;
+      .footer-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 20px;
+        color: $font-color-light;
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .other-footer-stuff {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        p {
+          display: inline;
+          line-height: 20px;
+          margin-left: 20px;
+          color: $font-color-light;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@import "_medias.scss";
